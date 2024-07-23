@@ -38,3 +38,33 @@ Para essa solução precisaremos eficientemente localizar o robô e converter su
 - Site Neato Robotics: [neatorobotics.com](https://neatorobotics.com/)
 - Site iRobot: [irobot.com](https://www.irobot.com/)
 - Trabalho relacionado na literatura: ["Exact and Heuristic Multi-Robot Dubins Coverage Path Planning for Known Environments"](https://www.mdpi.com/1424-8220/23/5/2560)
+
+## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/bernborgess">
+        <img src="https://github.com/bernborgess.png"
+        width="100px;"
+        alt="Foto do Bernardo Borges"/><br>
+        <sub>
+          <b>Bernardo Borges</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Daniele-Cassia">
+        <img src="https://github.com/Daniele-Cassia.png"
+        width="100px;"
+        alt="Foto da Daniele Cassia"/><br>
+        <sub>
+          <b>Daniele Cássia</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
