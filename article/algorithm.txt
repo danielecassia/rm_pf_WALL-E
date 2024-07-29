@@ -1,0 +1,18 @@
+
+
+Algorithm:
+cooperative_robots_cleaning_step():
+    for each robot r:
+        s = r.position
+        CLEAN[s] = True
+        if      a neighbour cell n has WF[n] == WF[s] and CLEAN[n] == False
+        then    set_goal(n).
+        else if a neighbour cell n has WF[n] in robot_range(r) and CLEAN[n] == False
+        then    set_goal(n).
+        else
+                run BFS to find nearest tile n with CLEAN = False and WF[n] in robot_range(r).
+                if   such n exists
+                then set_goal(nx.shortest_path).
+                else halt.
+
+

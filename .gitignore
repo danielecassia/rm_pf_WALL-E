@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+
+/textures
+/elements
+
 # Distribution / packaging
 .Python
 build/
