@@ -15,4 +15,8 @@ cooperative_robots_cleaning_step():
                 then set_goal(nx.shortest_path).
                 else halt.
 
-
+Algorithm:
+create_job_division():
+    s0 = find_first_point()
+    sf = find_last_point()
+    return bfs_multisource(s0,sf)
