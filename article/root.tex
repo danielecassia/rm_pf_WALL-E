@@ -2,9 +2,9 @@
 %2345678901234567890123456789012345678901234567890123456789012345678901234567890
 %        1         2         3         4         5         6         7         8
 
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
+% \documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out if you need a4paper
 
-%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
+\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4 paper
 
 \IEEEoverridecommandlockouts                              % This command is only needed if 
                                                           % you want to use the \thanks command
@@ -12,40 +12,15 @@
 \overrideIEEEmargins                                      % Needed to meet printer requirements.
 
 \usepackage[utf8]{inputenc}
-
-%In case you encounter the following error:
-%Error 1010 The PDF file may be corrupt (unable to open PDF file) OR
-%Error 1000 An error occurred while parsing a contents stream. Unable to analyze the PDF file.
-%This is a known problem with pdfLaTeX conversion filter. The file cannot be opened with acrobat reader
-%Please use one of the alternatives below to circumvent this error by uncommenting one or the other
-%\pdfobjcompresslevel=0
-%\pdfminorversion=4
-
-% See the \addtolength command later in the file to balance the column lengths
-% on the last page of the document
-
-% The following packages can be found on http:\\www.ctan.org
-%\usepackage{graphics} % for pdf, bitmapped graphics files
-%\usepackage{epsfig} % for postscript graphics files
-%\usepackage{mathptmx} % assumes new font selection scheme installed
-%\usepackage{times} % assumes new font selection scheme installed
-%\usepackage{amsmath} % assumes amsmath package installed
-%\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{graphicx}
+\usepackage{listings}
 
 \title{\LARGE \bf
 Sistema Multi-Robôs para Cobertura Eficiente de Ambientes Domésticos
 }
 
 
-\author{Bernardo Borges$^{1}$ e Daniele Diniz$^{2}$% <-this % stops a space
-\thanks{*This work was not supported by any organization}% <-this % stops a space
-\thanks{$^{1}$Albert Author is with Faculty of Electrical Engineering, Mathematics and Computer Science,
-        University of Twente, 7500 AE Enschede, The Netherlands
-        {\tt\small albert.author@papercept.net}}%
-\thanks{$^{2}$Bernard D. Researcheris with the Department of Electrical Engineering, Wright State University,
-        Dayton, OH 45435, USA
-        {\tt\small b.d.researcher@ieee.org}}%
-}
+\author{Bernardo Borges e Daniele Diniz}
 
 
 \begin{document}
@@ -58,149 +33,207 @@ Sistema Multi-Robôs para Cobertura Eficiente de Ambientes Domésticos
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{abstract}
+\section{INTRODUÇÃO}
 
-    Lorem
-    
-\end{abstract}
+\subsection{Contextualização}
 
+Uma aplicação relevante na área de robótica é a dos robôs aspiradores, que têm a
+função de percorrer o ambiente doméstico de forma autônoma, recolhendo detritos
+ao longo do caminho. Este projeto abordará o problema de cobertura no contexto de
+sistemas multi-robôs, com o objetivo de dividir a tarefa entre dois robôs. Um dos
+principais desafios nesta área é garantir que os robôs executem seu trajeto de forma
+eficiente, evitando a movimentação aleatória pelo espaço, como observado em
+robôs aspiradores convencionais, conforme demonstrado no vídeo da Neato
+Robotics.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{INTRODUCTION}
-
-This template provides authors with most of the formatting specifications needed for preparing electronic versions of their papers. All standard paper components have been specified for three reasons: (1) ease of use when formatting individual papers, (2) automatic compliance to electronic requirements that facilitate the concurrent or later production of electronic products, and (3) conformity of style throughout a conference proceedings. Margins, column widths, line spacing, and type styles are built-in; examples of the type styles are provided throughout this document and are identified in italic type, within parentheses, following the example. Some components, such as multi-leveled equations, graphics, and tables are not prescribed, although the various table text styles are provided. The formatter will need to create these components, incorporating the applicable criteria that follow.
-
-\section{PROCEDURE FOR PAPER SUBMISSION}
-
-\subsection{Selecting a Template (Heading 2)}
-
-First, confirm that you have the correct template for your paper size. This template has been tailored for output on the US-letter paper size. 
-It may be used for A4 paper size if the paper size setting is suitably modified.
-
-\subsection{Maintaining the Integrity of the Specifications}
-
-The template is used to format your paper and style the text. All margins, column widths, line spaces, and text fonts are prescribed; please do not alter them. You may note peculiarities. For example, the head margin in this template measures proportionately more than is customary. This measurement and others are deliberate, using specifications that anticipate your paper as one part of the entire proceedings, and not as an independent document. Please do not revise any of the current designations
-
-\section{MATH}
-
-Before you begin to format your paper, first write and save the content as a separate text file. Keep your text and graphic files separate until after the text has been formatted and styled. Do not use hard tabs, and limit use of hard returns to only one return at the end of a paragraph. Do not add any kind of pagination anywhere in the paper. Do not number text heads-the template will do that for you.
-
-Finally, complete content and organizational editing before formatting. Please take note of the following items when proofreading spelling and grammar:
-
-\subsection{Abbreviations and Acronyms} Define abbreviations and acronyms the first time they are used in the text, even after they have been defined in the abstract. Abbreviations such as IEEE, SI, MKS, CGS, sc, dc, and rms do not have to be defined. Do not use abbreviations in the title or heads unless they are unavoidable.
-
-\subsection{Units}
-
-\begin{itemize}
-
-    \item Use either SI (MKS) or CGS as primary units. (SI units are encouraged.) English units may be used as secondary units (in parentheses). An exception would be the use of English units as identifiers in trade, such as .5-inch disk drive.
-    \item Avoid combining SI and CGS units, such as current in amperes and magnetic field in oersteds. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity that you use in an equation.
-          
-\end{itemize}
-
-
-\subsection{Equations}
-
-The equations are an exception to the prescribed specifications of this template. You will need to determine whether or not your equation should be typed using either the Times New Roman or the Symbol font (please no other font). To create multileveled equations, it may be necessary to treat the equation as a graphic and insert it into the text after your paper is styled. Number equations consecutively. Equation numbers, within parentheses, are to position flush right, as in (1), using a right tab stop. To make your equations more compact, you may use the solidus ( / ), the exp function, or appropriate exponents. Italicize Roman symbols for quantities and variables, but not Greek symbols. Use a long dash rather than a hyphen for a minus sign. Punctuate equations with commas or periods when they are part of a sentence, as in
-
-$$
-    \alpha + \beta = \chi \eqno{(1)}
-$$
-
-Note that
-
-\subsection{Some Common Mistakes}
-\begin{itemize}
-
-
-    \item In American English, commas, semi-/colons, periods, question and exclamation marks are located within quotation marks only when a complete thought or name is cited, such as a title or full quotation. When quotation marks are used, instead of a bold or italic typeface, to highlight a word or phrase, punctuation should appear outside of the quotation marks. A parenthetical phrase or statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.)
-          
-\end{itemize}
-
-
-\section{USING THE TEMPLATE}
-
-Use this sample document as your LaTeX source file to create your document. Save this file as {\bf root.tex}. You have to make sure to use the cls file that came with this distribution. If you use a different style file, you cannot expect to get required margins. Note also that when you are creating your out PDF file, the source file is only part of the equation. {\it Your \TeX\ $\rightarrow$ PDF filter determines the output file size. Even if you make all the specifications to output a letter file in the source - if your filter is set to produce A4, you will only get A4 output. }
-
-It is impossible to account for all possible situation, one would encounter using \TeX. If you are using multiple \TeX\ files you must make sure that the ``MAIN`` source file is called root.tex - this is particularly important if your conference is using PaperPlaza's built in \TeX\ to PDF conversion tool.
-
-\subsection{Headings, etc}
-
-Text heads organize 
-
-\subsection{Figures and Tables}
-
-Positioning Figures 
-
-\begin{table}[h]
-    \caption{An Example of a Table}
-    \label{table_example}
-    \begin{center}
-        \begin{tabular}{|c||c|}
-            \hline
-            One   & Two  \\
-            \hline
-            Three & Four \\
-            \hline
-        \end{tabular}
-    \end{center}
-\end{table}
-
-
-\begin{figure}[thpb]
+\begin{figure}[htb!]
     \centering
-    \framebox{\parbox{3in}{We suggest that you use a text box to insert a graphic (which is ideally a 300 dpi TIFF or EPS file, with all fonts embedded) because, in an document, this method is somewhat more stable than directly inserting a picture.
-        }}
-    %\includegraphics[scale=1.0]{figurefile}
-    \caption{Inductance of oscillation winding on amorphous
-        magnetic core versus DC bias magnetic field}
-    \label{figurelabel}
+    \includegraphics[scale=0.23]{./images/neato_compare.png}
+    \caption{Comparativo de robôs apiradores sem e com planejamento de caminhos}
+    \label{fig:fig9}
+\end{figure}
+
+Para superar esses desafios, utilizaremos nosso conhecimento em mapeamento,
+controle e algoritmos para desenvolver um sistema de multi-robôs que abordará o
+problema de cobertura do ambiente de forma eficaz, completa e, adicionalmente,
+enfrentaremos o desafio de implementar a colaboração entre os robôs. A
+implementação será realizada utilizando a linguagem Python e o simulador
+CoppeliaSim.
+
+
+\subsection{Motivação}
+
+Abordar este problema é crucial para aumentar a eficiência energética e reduzir a
+pegada de carbono dos robôs aspiradores domésticos. Um planejamento adequado
+permite que esses robôs executem suas tarefas de maneira mais rápida e eficiente,
+contribuindo significativamente para a sustentabilidade ambiental. As principais
+aplicações incluem a limpeza autônoma em residências, escritórios e outros
+espaços fechados onde a manutenção regular é necessária.
+
+\subsection{Descrição do Problema}
+
+O problema específico abordado é a ineficiência dos trajetos dos robôs aspiradores
+domésticos devido à ausência de um planejamento deliberativo de cobertura. Os
+desafios incluem a criação de um mapa da residência, a discretização do ambiente
+em uma grade, e a implementação de algoritmos de cobertura que permitam a
+coordenação eficiente de múltiplos robôs. O objetivo é desenvolver uma solução
+que possibilite aos robôs realizar trajetos otimizados e colaborativos, minimizando o
+tempo e a energia consumidos para limpar o ambiente completamente.
+Em nossa implementação, consideraremos um ambiente com dois robôs que devem
+colaborar na limpeza, de forma paralela. Além disso, vamos trabalhar partindo de
+um mapa pré-existente do ambiente, que teria sido obtido em uma fase anterior, no
+caso de uma implementação real.
+
+\section{TRABALHOS RELACIONADOS}
+
+Implementações similares ao nosso projeto incluem os robôs da Neato Robotics.
+Esses robôs utilizam técnicas de mapeamento e navegação com base em visão computacional
+(bitvision) e empregam modelos treinados com florestas aleatórias para melhorar a eficiência da navegação
+e da cobertura do ambiente.
+
+Diversos estudos abordam o problema de cobertura em sistemas multi-robôs.
+Um exemplo relevante é o artigo "Exact and Heuristic Multi-Robot Dubins Coverage Path Planning for Known Environments"
+publicado na revista Sensors.
+Este estudo apresenta métodos exatos e heurísticos para o planejamento de trajetórias de cobertura
+para múltiplos robôs em ambientes conhecidos.
+A pesquisa destaca a importância de criar trajetórias eficientes que minimizem o tempo e os
+recursos necessários para a cobertura completa do ambiente, focando em trajetórias do tipo
+Dubins, que são especialmente úteis para robôs com restrições de movimentação como os robôs aspiradores.
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.2]{./images/neato_bot.png}
+    \caption{Robô aspirador da empresa Neato Robotics}
 \end{figure}
 
 
-Figure Labels: Use 8 point Times New Roma
+\newpage
 
-\section{CONCLUSIONS}
+\section{METODOLOGIA}
+% descrição detalhada sobre a implementação. Deve ser discutido as estruturas de
+% dados e algoritmos utilizados, bem como decisões tomadas relativas aos casos e detalhes que
+% porventura estejam omissos no enunciado.
 
-A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions. 
+Pensando em todos os problemas apresentados, trazemos uma solução que realizará um
+\textbf{mapeamento assertivo} para obter uma cobertura eficiente, realizando a delimitação
+de áreas de atuação dos robôs, o que evitará problemas de colisão entre eles.
 
-\addtolength{\textheight}{-12cm}   % This command serves to balance the column lengths
-% on the last page of the document manually. It shortens
-% the textheight of the last page by a suitable amount.
-% This command does not take effect until the next page
-% so it should come on the page before the last. Make
-% sure that you do not shorten the textheight too much.
+\subsection{Premissas}
+Para nosso projeto realizamos algumas suposições:
+\begin{itemize}
+    \item O mapa do ambiente é conhecido;
+    \item Os robôs conseguem se comunicar;
+    \item O ambiente será \textbf{discretizado}, em células ocupadas($1$) e desocupadas ($0$);
+\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Separação de Tarefas}
+Considerando os múltiplos robôs, iremos atribuir regiões disjuntas para atuação.
+Para isso utilizaremos o algoritmo \textbf{Flood Fill}, que partirá de dois extremos
+do mapa e irá pintá-lo de \textit{vermelho} e \textit{azul} para as duas regiões.
+
+\lstset{language=Python}
+\begin{lstlisting}
+def create_job_division():
+    s0 = find_first_free_cell()
+    sf = find_last_free_cell()
+    queue = [s0,sf]
+    while not queue.empty:
+        (i,j,c) = queue.pop()
+        if ColorGraph[i][j] != UNSET:
+            continue
+        ColorGraph[i][j] = c
+        for (di,dj) in connect4Moves:
+            if not valid cell (di,dj):
+                continue
+            q.append((di,dj,c))
+        
+\end{lstlisting}
+
+Após esse algortimo, conseguimos as regiões para cada robô:
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[scale=0.4]{../home_dirty.png}
+    \caption{Divisão das regiões em vermelho e azul}
+\end{figure}
+
+\subsection{Robôs e Controle}
+Para esse projeto usamos o robo "kobuki", que é direcional. 
+O controle utilizado é "de Luca Oriolo" e utilizamos a locomoção 
+inspirada em campos potênciais para criar uma força de atração do robô
+em relação aos objetivos que vamos atualizando iterativamente.
 
 
+\subsection{Navegação}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Para a navegação em alto nível implementamos uma lógica que visita células mais próxima primeiro,
+ainda na lógica BFS:
+
+\lstset{language=Python}
+\begin{lstlisting}
+for robot in robots:
+    if robot.cells_left == 0: continue
+    if robot.has_goal:
+        robot.move_to_goal()
+        continue
+    [ri, rj] = robot.current_location
+    for (dj, di) in moves:
+        if robot.is_task_cell(ni, nj):
+            robot.add_new_goal([ni,nj])
+            break
+    if robot.has_goal():
+        robot.move_to_goal()
+        continue
+    # BFS to find nearest cell to clean
+    path = robot.find_nearest_task_cell()
+    if path == None: continue
+    robot.add_new_goals(path)
+    robot.move_to_goal()
+
+\end{lstlisting}
+
+Como podemos ver, primeiro tentamos limpar células na cruz de 4-conexão. Caso não haja
+uma célula próxima realizamos uma BFS no grid, que passa por células pela cor atribuída
+e seguimos esse caminho até o objetivo.
 
 
+\section{RESULTADOS}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{APPENDIX}
+Conseguimos realizar nossos testes com sucesso em duas cenas distintas, a primeira se chama
+"diningRoom" e possui uma grande mesa ao centro e bastantes células a serem cobertas. A segunda
+cena é "home", um apartamento com quartos, sala e banheiro, que exige organização e precisão para limpeza
 
-Appendixes should appear before the acknowledgment.
+\begin{itemize}
+    \item Em \textit{DiningRoom} conseguimos coordenar os robôs para limpeza completa em 8 minutos e
+          21 segundos.
+          \begin{figure}[htb!]
+              \centering
+              \includegraphics[scale=0.4]{../clean.png}
+              \caption{Células limpas em \textit{DiningRoom}}
+          \end{figure}
+    \item Em \textit{Home} os robôs terminaram a limpeza em 7:38.
+\end{itemize}
 
-\section*{ACKNOWLEDGMENT}
 
-The preferred spelling of the 
+\newpage
 
+\section{CONCLUSÃO}
 
+Com esse trabalho conseguimos entender os problemas e soluções aplicadas na coordenação
+de robôs, ainda que com apenas 2 elementos. Os desafios no ambiente de simulação foram de
+localiazação, atribuição de tarefas, controle e organização de código, já que há mais peças
+em movimento simultâneamente que deve ser pensadas.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-References are important to the reader; therefore, each citation must be complete and correct. If at all possible, references should be commonly available publications.
-
-
+Próximos passos possíveis para extender esse projeto serão:
+\begin{itemize}
+    \item Tranferência de tarefas, em um momento em que um robô terminou de limpar sua área, podera redividir a tarefa para não permanecer ocioso;
+    \item Atualização Automática do Mapa, para cenários mais dinâmicos, como a mudança de móveis;
+    \item Suporte para Diversos Robôs, aumentando a frota dinâmicamente dividindo a tarefa para mais robôs
+\end{itemize}
 
 \begin{thebibliography}{99}
     
     \bibitem{c3} H. Poor, An Introduction to Signal Detection and Estimation.   New York: Springer-Verlag, 1985, ch. 4.
-    
-    
     
     
 \end{thebibliography}
