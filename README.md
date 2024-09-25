@@ -56,8 +56,8 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Daniele-Cassia">
-        <img src="https://github.com/Daniele-Cassia.png"
+      <a href="https://github.com/danielecassia.png">
+        <img src="https://github.com/danielecassia.png"
         width="100px;"
         alt="Foto da Daniele Cassia"/><br>
         <sub>
